@@ -1,7 +1,6 @@
-
 export interface IUserReg {
-    name: string;
-    email: string;
-    phoneNum: string;
-    password: string;
+  name: string;
+  email: string;
+  imageUrl: string;
+  password: string;
 }
