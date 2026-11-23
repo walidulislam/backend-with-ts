@@ -1,5 +1,5 @@
 import { prisma } from "../../../lib/prisma.ts";
-import type { IUserReg } from "./auth.interface.ts";
+import type { ILogin, IUserReg } from "./auth.interface.ts";
 
 const userRegistration = async (data: IUserReg) => {
   const user = await prisma.user.create({
@@ -18,6 +18,10 @@ const userRegistration = async (data: IUserReg) => {
   return user;
 };
 
+const userLogin = async (data: ILogin) => {
+}
+
 export const authService = {
   userRegistration,
+  userLogin
 };
